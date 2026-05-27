@@ -1,3 +1,5 @@
+namespace TechnicalAssessment.Models;
+
 public class Person
 {
     public string FirstName { get; set; }

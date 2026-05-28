@@ -4,6 +4,8 @@ Technical Assessment
 MVC Version
 
 # How to run
+cd TechnicalAssessment
+
 dotnet run
 
 # App

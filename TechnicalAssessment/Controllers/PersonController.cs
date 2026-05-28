@@ -36,7 +36,7 @@ public class PersonController : Controller
         });
 
         System.IO.File.WriteAllText(FilePath, updatedJson);
-
+        TempData["Success"] = "Name saved successfully";
         return RedirectToAction("Index");
     }
 }

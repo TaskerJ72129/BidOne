@@ -1,8 +1,28 @@
 @model TechnicalAssessment.Models.Person
 
-<form asp-action="Index" method="post">
-    <input asp-for="FirstName" placeholder="First Name" />
-    <input asp-for="LastName" placeholder="Last Name" />
+<div class="container d-flex justify-content-center align-items-center min-vh-50">
+    <div class="card shadow p-4" style="width: 400px;">
+        <h2 class="text-center mb-4">Name Form</h2>
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["Success"]
+            </div>
+        }
+        <form asp-action="Index" method="post">
+            <div class="mb-3">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input asp-for="FirstName" class="form-control" placeholder="Enter first name" required />
+            </div>
 
-    <button type="submit">Submit</button>
-</form>
+            <div class="mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input asp-for="LastName" class="form-control" placeholder="Enter last name" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
